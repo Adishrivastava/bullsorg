@@ -1,0 +1,45 @@
+$layer1: 10;
+$layer2: 20;
+$layer3: 30;
+$layer4: 40;
+
+$breakpoint-xs: 420px;
+$breakpoint-sm: 580px;
+$breakpoint-md: 710px;
+$breakpoint-lg: 960px;
+
+$content-width: 900px;
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+
+.page-container {
+	width: 100%;
+	padding-top: 100px;
+}
+
+.navbar {
+	width: 100%;
+	padding: 15px;
+	background-color: white;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: $layer3;
+	display: flex;
+	justify-content: space-between;
+}
+
+.main-container {
+	width: 100%;
+	max-width: $content-width;
+	margin: auto;
+}
+
+.heading-cont {
+	text-align: center;
+}
