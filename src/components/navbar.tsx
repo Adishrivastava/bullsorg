@@ -7,8 +7,10 @@ interface Props {
 const Navbar = (props: Props) => {
    return (
       <nav className="navbar">
-         <img src="./asa.jpb" alt="LOGO HERE" />
-         <button type="button">CONNECT US</button>
+         <div className="nav-inner">
+            <img src="./asa.jpb" alt="LOGO HERE" />
+            <button type="button">connect us</button>
+         </div>
       </nav>
    )
 }

@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 $layer1: 10;
 $layer2: 20;
 $layer3: 30;
@@ -10,26 +14,56 @@ $breakpoint-lg: 960px;
 
 $content-width: 900px;
 
+$primaryColor: #fa2d37;
+$textDark: rgb(22, 22, 22);
+$textLight: #333;
+
+$headingFont: 'Playfair Display', serif;
+
 html,
 body {
 	margin: 0;
 	padding: 0;
+	font-family: 'Rubik', sans-serif;
+}
+
+// button styles
+button {
+	border: none;
+	outline: none;
+	border-radius: 5rem;
+	font-size: 0.8rem;
+	padding: 1em 1.4em;
+	text-transform: capitalize;
+	letter-spacing: 1px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+	margin: 0px;
+	font-family: $headingFont;
 }
 
 .page-container {
 	width: 100%;
-	padding-top: 100px;
 }
 
 .navbar {
 	width: 100%;
-	padding: 15px;
 	background-color: white;
 	position: fixed;
 	top: 0;
 	left: 0;
 	right: 0;
 	z-index: $layer3;
+}
+
+.nav-inner {
+	max-width: 1200px;
+	margin: 15px auto;
 	display: flex;
 	justify-content: space-between;
 }
@@ -40,6 +74,111 @@ body {
 	margin: auto;
 }
 
+.underline {
+	width: 60%;
+	height: 3px;
+	margin: 40px auto;
+	background-color: $primaryColor;
+}
+
 .heading-cont {
-	text-align: center;
+	margin-top: 80px;
+	padding-top: 30px;
+	width: 100%;
+	height: 120vh;
+	background-image: url('../assets/asset1.png');
+	background-size: cover;
+	background-position: center;
+	h1 {
+		font-size: 4rem;
+		color: $primaryColor;
+	}
+	button {
+		margin-top: 40px;
+		background-color: $primaryColor;
+		color: white;
+		font-size: 1rem;
+		padding: 1em 1.8em;
+	}
+}
+
+.second-section {
+	margin: 150px auto;
+	border-radius: 10px;
+	border: 4px solid $primaryColor;
+	padding: 20px 30px;
+	h2 {
+		font-size: 2.5rem;
+		padding: 0px 20px;
+		font-family: $headingFont;
+	}
+	p {
+		font-size: 1.5rem;
+	}
+}
+
+.points-section {
+	margin-top: 100px;
+	h4 {
+		font-family: $headingFont;
+		font-size: 2rem;
+		p {
+			font-size: 1rem;
+			color: $textLight;
+			font-family: 'Poppins', sans-serif;
+			text-transform: uppercase;
+		}
+	}
+	.points-container {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		margin-top: 80px;
+		.point {
+			margin-bottom: 40px;
+			img {
+				width: 60px;
+				padding: 20px 0px;
+			}
+		}
+	}
+}
+
+.big-comma {
+	line-height: 10px;
+	font-size: 3rem;
+	color: $primaryColor;
+}
+
+.fourth-section {
+	margin-top: 100px;
+	h3 {
+		font-size: 2rem;
+	}
+
+	.top-points {
+		margin: 50px auto;
+		padding: 0px 30px;
+
+		.point-sec {
+			display: flex;
+			.circle-main {
+				display: flex;
+
+				p {
+					margin-top: 22px;
+					margin-right: 18px;
+					width: 10px;
+					height: 10px;
+					border-radius: 50%;
+					background-color: $primaryColor;
+				}
+			}
+			p {
+				text-align: left;
+				color: $textLight;
+				font-size: 1.1rem;
+				margin-bottom: 20px;
+			}
+		}
+	}
 }
