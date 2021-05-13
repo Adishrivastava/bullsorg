@@ -1,11 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap");
 html,
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 button {
@@ -25,6 +26,35 @@ h4,
 h5 {
   margin: 0px;
   font-family: "Playfair Display", serif;
+  text-align: left;
+}
+
+p {
+  margin: 0;
+}
+
+.headings {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #423d68;
+}
+
+.headings-2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #423d68;
+}
+
+.sub-heading {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #444a78;
+}
+
+.para-text {
+  font-size: 1.1rem;
+  font-weight: 400;
 }
 
 .page-container {
@@ -89,10 +119,8 @@ h5 {
 }
 
 .second-section {
-  margin: 150px auto;
   border-radius: 10px;
   border: 4px solid #fa2d37;
-  padding: 20px 30px;
 }
 
 .second-section h2 {
@@ -105,23 +133,50 @@ h5 {
   font-size: 1.5rem;
 }
 
-.points-section {
-  margin-top: 100px;
+.about-section-cont {
+  width: 100%;
+  max-width: 1200px;
+  margin: 100px auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.points-section h4 {
-  font-family: "Playfair Display", serif;
-  font-size: 2rem;
+.about-section-cont img {
+  width: 75%;
+  margin: auto;
 }
 
-.points-section h4 p {
-  font-size: 1rem;
-  color: #333;
-  font-family: 'Poppins', sans-serif;
-  text-transform: uppercase;
+.about-section-cont .about-in {
+  width: 80%;
+  margin: auto;
 }
 
-.points-section .points-container {
+.about-section-cont .about-in h2 {
+  text-align: left;
+}
+
+.about-section-cont .about-in p {
+  margin-top: 30px;
+  text-align: left;
+  color: #444a78;
+}
+
+.cards-section {
+  margin-top: 150px;
+  background-color: #f2f0fc;
+  padding: 100px;
+}
+
+.cards-section h4 {
+  text-align: center;
+}
+
+.cards-section .cards-container {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
@@ -129,47 +184,57 @@ h5 {
   margin-top: 80px;
 }
 
-.points-section .points-container .point {
-  margin-bottom: 40px;
+.cards-section .cards-container .card {
+  border-radius: 15px;
+  background-color: white;
+  margin: 20px;
+  padding: 25px;
 }
 
-.points-section .points-container .point img {
+.cards-section .cards-container .card img {
   width: 60px;
-  padding: 20px 0px;
+  padding-bottom: 20px;
 }
 
-.big-comma {
-  line-height: 10px;
-  font-size: 3rem;
-  color: #fa2d37;
-}
-
-.fourth-section {
+.points-section {
   margin-top: 100px;
+  padding: 100px;
 }
 
-.fourth-section h3 {
-  font-size: 2rem;
+.points-section .points-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
 }
 
-.fourth-section .top-points {
+.points-section .points-container img {
+  width: 80%;
+  margin: auto;
+}
+
+.points-section .points-container .points-in {
+  width: 80%;
+  margin: auto;
+}
+
+.points-section .points-container .points-in .top-points {
   margin: 50px auto;
-  padding: 0px 30px;
 }
 
-.fourth-section .top-points .point-sec {
+.points-section .points-container .points-in .top-points .point-sec {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.fourth-section .top-points .point-sec .circle-main {
+.points-section .points-container .points-in .top-points .point-sec .circle-main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.fourth-section .top-points .point-sec .circle-main p {
+.points-section .points-container .points-in .top-points .point-sec .circle-main p {
   margin-top: 22px;
   margin-right: 18px;
   width: 10px;
@@ -178,10 +243,39 @@ h5 {
   background-color: #fa2d37;
 }
 
-.fourth-section .top-points .point-sec p {
+.points-section .points-container .points-in .top-points .point-sec p {
   text-align: left;
-  color: #333;
-  font-size: 1.1rem;
   margin-bottom: 20px;
+}
+
+.review-container {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 5fr 1fr;
+      grid-template-columns: 1fr 5fr 1fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (max-width: 600px) {
+  .review-container {
+    -ms-grid-columns: 1fr 5fr 1fr;
+        grid-template-columns: 1fr 5fr 1fr;
+  }
+  .about-section-cont {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .about-section-cont .about-in {
+    margin-top: 20px;
+  }
+  .about-section-cont .about-in h2 {
+    text-align: center;
+  }
+  .about-section-cont .about-in p {
+    text-align: center;
+  }
 }
 /*# sourceMappingURL=global.css.map */

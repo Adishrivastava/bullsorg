@@ -8,7 +8,7 @@ const Navbar = (props: Props) => {
    return (
       <nav className="navbar">
          <div className="nav-inner">
-            <img src="./asa.jpb" alt="LOGO HERE" />
+            <img src="/assets/logos/logoBig.png" style={{ width: '100px' }} alt="LOGO HERE" />
             <button type="button">connect us</button>
          </div>
       </nav>
