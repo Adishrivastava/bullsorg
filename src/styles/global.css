@@ -55,6 +55,7 @@ p {
   font-size: 3.5rem;
   font-weight: 700;
   color: #423d68;
+  line-height: 3.3rem;
 }
 
 .headings-2 {
@@ -64,10 +65,11 @@ p {
 }
 
 .sub-heading {
-  font-size: 1.1rem;
+  font-size: 1rem;
   text-transform: uppercase;
-  font-weight: 500;
+  font-weight: 600;
   color: #444a78;
+  margin-bottom: 15px;
 }
 
 .para-text {
@@ -264,6 +266,7 @@ p {
 .points-section .points-container .points-in {
   width: 80%;
   margin: auto;
+  text-align: left;
 }
 
 .points-section .points-container .points-in .top-points {
@@ -297,7 +300,6 @@ p {
 }
 
 .review-container {
-  width: 100%;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 5fr 1fr;
@@ -305,6 +307,69 @@ p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 50px;
+  position: relative;
+}
+
+.review-container svg {
+  font-size: 2rem;
+}
+
+.review-container .circle-1 {
+  position: absolute;
+  top: 50px;
+  left: 100px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #e4dcf3;
+  z-index: -1;
+}
+
+.review-container .circle-2 {
+  position: absolute;
+  top: 100px;
+  right: 400px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: #c9bfdb;
+  z-index: -1;
+}
+
+.review-container .review img {
+  display: block;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: auto;
+  margin-bottom: 30px;
+}
+
+.CTA {
+  text-align: center;
+}
+
+.CTA img {
+  width: 60%;
+}
+
+.CTA h3 {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.CTA p {
+  margin-top: 20px;
+}
+
+.CTA button {
+  margin-top: 30px;
+}
+
+.footer {
+  padding: 50px;
+  background-color: #423d68;
 }
 
 @media screen and (max-width: 600px) {

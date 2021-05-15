@@ -83,7 +83,8 @@ const AboutSection = () => {
       <div className="about-section-cont" id="about-section">
          <img src="/Vector Smart Object-5.png" alt="asd" />
          <div className="about-in">
-            <h2 className="headings">About Us</h2>
+            <p className="sub-heading">About Us</p>
+            <h3 className="headings">What we do</h3>
             <p className="para-text">
                We are a group of people who share the same vision, to help people achieve financial independency through mindful solutions. With us you can learn all the tools necessary to achieve the goal of financial independency.
             </p>
@@ -121,6 +122,7 @@ const PointsSection = () => {
       <div className="points-section" id="points-section">
          <div className="points-container">
             <div className="points-in">
+               <p className="sub-heading">Our Features</p>
                <h3 className="headings">
                   We provide best value to you
                </h3>
@@ -141,6 +143,19 @@ const PointsSection = () => {
    )
 }
 
+const CTA = () => {
+   return (
+      <div id="CTA" className="CTA">
+         <div className="main-container">
+            <img src="/Vector Smart Object-1.png" alt="" />
+            <h3 className="headings">No more wait now</h3>
+            <p>join us now to build your financial status</p>
+            <button>JOIN US</button>
+         </div>
+      </div>
+   )
+}
+
 
 const Homepage: React.FC = (props: Props) => {
    return (
@@ -155,6 +170,8 @@ const Homepage: React.FC = (props: Props) => {
          <PointsSection />
 
          <Reviews />
+
+         <CTA />
 
          <Footer />
 
