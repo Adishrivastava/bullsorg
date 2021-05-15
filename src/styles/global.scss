@@ -16,8 +16,12 @@ $breakpoint-lg: 960px;
 $content-width: 900px;
 
 $primaryColor: #fa2d37;
+$secondaryColor: rgb(79, 54, 140);
 $textDark: rgb(66, 61, 104);
 $textLight: rgb(68, 74, 120);
+
+$bgSecondary: rgb(222, 226, 246);
+$btnColor: rgb(57, 51, 80);
 
 $headingFont: 'Playfair Display', serif;
 
@@ -26,17 +30,30 @@ body {
 	margin: 0;
 	padding: 0;
 	font-family: 'Source Sans Pro', sans-serif;
+	transition: all 1s ease-in-out;
 }
 
 // button styles
 button {
 	border: none;
 	outline: none;
-	border-radius: 5rem;
+	border-radius: 5em;
 	font-size: 0.8rem;
-	padding: 1em 1.4em;
+	padding: 1em 1.8em;
 	text-transform: capitalize;
+	transition: all 0.2s ease-in;
 	letter-spacing: 1px;
+	cursor: pointer;
+	height: min-content;
+	background-color: $primaryColor;
+	color: aliceblue;
+	font-family: 'Poppins', sans-serif;
+}
+
+a {
+	text-decoration: none;
+	color: $textLight;
+	transition: all 1s ease-in-out;
 }
 
 h1,
@@ -45,10 +62,10 @@ h3,
 h4,
 h5 {
 	margin: 0px;
-	font-family: $headingFont;
 	text-align: left;
 }
 p {
+	color: $textLight;
 	margin: 0;
 }
 
@@ -88,13 +105,27 @@ p {
 	left: 0;
 	right: 0;
 	z-index: $layer3;
-}
-
-.nav-inner {
-	max-width: 1200px;
-	margin: 15px auto;
-	display: flex;
-	justify-content: space-between;
+	.nav-inner {
+		max-width: 1200px;
+		margin: 5px auto;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		.sec-section {
+			display: flex;
+			.menu-items {
+				display: flex;
+				flex-direction: row;
+				margin-right: 20px;
+				a {
+					margin: auto 15px;
+					text-transform: uppercase;
+					font-size: 0.9rem;
+					font-weight: 600;
+				}
+			}
+		}
+	}
 }
 
 .main-container {
@@ -121,13 +152,17 @@ p {
 	h1 {
 		font-size: 4rem;
 		color: $primaryColor;
+		text-align: center;
+		font-weight: 900;
+	}
+	h3 {
+		font-weight: 500;
+		margin-top: 20px;
+		text-align: center;
 	}
 	button {
 		margin-top: 40px;
-		background-color: $primaryColor;
-		color: white;
 		font-size: 1rem;
-		padding: 1em 1.8em;
 	}
 }
 
@@ -146,7 +181,7 @@ p {
 .about-section-cont {
 	width: 100%;
 	max-width: 1200px;
-	margin: 100px auto;
+	margin: 70px auto;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	align-items: center;
@@ -173,8 +208,6 @@ p {
 }
 
 .cards-section {
-	margin-top: 150px;
-	background-color: rgb(242, 240, 252);
 	padding: 100px;
 	h4 {
 		text-align: center;
@@ -186,7 +219,7 @@ p {
 
 		.card {
 			border-radius: 15px;
-			background-color: white;
+			background-color: $bgSecondary;
 			margin: 20px;
 			padding: 25px;
 			img {
@@ -198,9 +231,8 @@ p {
 }
 
 .points-section {
-	margin-top: 100px;
 	padding: 100px;
-	// background-color: rgb(242, 240, 252);
+	background-color: $bgSecondary;
 
 	.points-container {
 		display: grid;
@@ -220,12 +252,12 @@ p {
 					.circle-main {
 						display: flex;
 						p {
-							margin-top: 22px;
+							margin-top: 10px;
 							margin-right: 18px;
 							width: 10px;
 							height: 10px;
 							border-radius: 50%;
-							background-color: $primaryColor;
+							background-color: $secondaryColor;
 						}
 					}
 					p {

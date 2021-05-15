@@ -7,27 +7,27 @@ interface Props {
 
 const cardItems = [
    {
-      icon: '../assets/icons/stock-exchange-app.png   ',
+      icon: '../assets/icons/298-coins-outline.svg',
       label: 'Basics of Stock Market'
    },
    {
-      icon: '../assets/icons/stock-exchange-app.png   ',
+      icon: '../assets/icons/453-savings-pig-outline.svg',
       label: 'Fundamental Analysis'
    },
    {
-      icon: '../assets/icons/stock-exchange-app.png   ',
+      icon: '../assets/icons/943-commodity-outline.svg',
       label: 'Trading and Techincal Analysis'
    },
    {
-      icon: '../assets/icons/stock-exchange-app.png   ',
+      icon: '../assets/icons/948-stock-share-outline.svg',
       label: 'Mutual Funds'
    },
    {
-      icon: '../assets/icons/stock-exchange-app.png   ',
+      icon: '../assets/icons/955-demand-outline.svg',
       label: 'Real Estate'
    },
    {
-      icon: '../assets/icons/stock-exchange-app.png   ',
+      icon: '../assets/icons/946-equity-security-outline.svg',
       label: 'Passive income'
    },
 ]
@@ -61,11 +61,26 @@ const Point = ({ text }: { text: any }) => {
    )
 }
 
+const HeadingSection = () => {
+   return (
+      <div className="heading-cont"
+      >
+         <div className="">
+            <h1>Bullsorg</h1>
+            <h3>A crapy place for all those greedy people.</h3>
+         </div>
+         <div className="">
+            <button type="button">Join now</button>
+         </div>
+      </div>
+   )
+}
+
 // about section
 const AboutSection = () => {
 
    return (
-      <div className="about-section-cont">
+      <div className="about-section-cont" id="about-section">
          <img src="/Vector Smart Object-5.png" alt="asd" />
          <div className="about-in">
             <h2 className="headings">About Us</h2>
@@ -80,7 +95,7 @@ const AboutSection = () => {
 
 const CardsSection = () => {
    return (
-      <div className="cards-section">
+      <div className="cards-section" id="card-section">
 
          <div className="main-container">
             <p className="sub-heading">
@@ -103,7 +118,7 @@ const CardsSection = () => {
 
 const PointsSection = () => {
    return (
-      <div className="points-section">
+      <div className="points-section" id="points-section">
          <div className="points-container">
             <div className="points-in">
                <h3 className="headings">
@@ -127,20 +142,11 @@ const PointsSection = () => {
 }
 
 
-const Homepage = (props: Props) => {
+const Homepage: React.FC = (props: Props) => {
    return (
       <div className="page-container">
 
-         <div className="heading-cont"
-         >
-            <div className="">
-               <h1>Bullsorg</h1>
-               <p>A crapy place for all those greedy people.</p>
-            </div>
-            <div className="">
-               <button type="button">Join now</button>
-            </div>
-         </div>
+         <HeadingSection />
 
          <AboutSection />
 

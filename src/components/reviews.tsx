@@ -1,4 +1,6 @@
-import React,{Fragment} from 'react'
+import React, { Fragment } from 'react'
+import { faLongArrowAltLeft, faLongArrowAltRight } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 interface Props {
 
@@ -7,22 +9,18 @@ interface Props {
 const Reviews = (props: Props) => {
    return (
       <Fragment>
-      
-      <div className="review-container">
-         <div className="arr-cont">
-            <span>
-               a
-            </span>
+         <div className="review-container" id="reviews-section">
+            <div className="arr-cont">
+               <FontAwesomeIcon icon={faLongArrowAltLeft} />
+            </div>
+            <div className="">
+
+               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit ad facilis maiores sed magnam, rerum tempora voluptate, explicabo, unde aut quidem rem! Libero consectetur dolorem corporis officia, neque nesciunt repellendus.
+            </div>
+            <div className="arr-cont">
+               <FontAwesomeIcon icon={faLongArrowAltRight} />
+            </div>
          </div>
-         <div className="">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit ad facilis maiores sed magnam, rerum tempora voluptate, explicabo, unde aut quidem rem! Libero consectetur dolorem corporis officia, neque nesciunt repellendus.
-         </div>
-         <div className="arr-cont">
-            <span>
-               b
-            </span>
-         </div>
-      </div>
       </Fragment>
    )
 }

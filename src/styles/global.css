@@ -7,16 +7,34 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Source Sans Pro', sans-serif;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
 }
 
 button {
   border: none;
   outline: none;
-  border-radius: 5rem;
+  border-radius: 5em;
   font-size: 0.8rem;
-  padding: 1em 1.4em;
+  padding: 1em 1.8em;
   text-transform: capitalize;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
   letter-spacing: 1px;
+  cursor: pointer;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  background-color: #fa2d37;
+  color: aliceblue;
+  font-family: 'Poppins', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #444a78;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
 }
 
 h1,
@@ -25,11 +43,11 @@ h3,
 h4,
 h5 {
   margin: 0px;
-  font-family: "Playfair Display", serif;
   text-align: left;
 }
 
 p {
+  color: #444a78;
   margin: 0;
 }
 
@@ -71,15 +89,42 @@ p {
   z-index: 30;
 }
 
-.nav-inner {
+.navbar .nav-inner {
   max-width: 1200px;
-  margin: 15px auto;
+  margin: 5px auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navbar .nav-inner .sec-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.navbar .nav-inner .sec-section .menu-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-right: 20px;
+}
+
+.navbar .nav-inner .sec-section .menu-items a {
+  margin: auto 15px;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  font-weight: 600;
 }
 
 .main-container {
@@ -108,14 +153,19 @@ p {
 .heading-cont h1 {
   font-size: 4rem;
   color: #fa2d37;
+  text-align: center;
+  font-weight: 900;
+}
+
+.heading-cont h3 {
+  font-weight: 500;
+  margin-top: 20px;
+  text-align: center;
 }
 
 .heading-cont button {
   margin-top: 40px;
-  background-color: #fa2d37;
-  color: white;
   font-size: 1rem;
-  padding: 1em 1.8em;
 }
 
 .second-section {
@@ -136,7 +186,7 @@ p {
 .about-section-cont {
   width: 100%;
   max-width: 1200px;
-  margin: 100px auto;
+  margin: 70px auto;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr;
@@ -167,8 +217,6 @@ p {
 }
 
 .cards-section {
-  margin-top: 150px;
-  background-color: #f2f0fc;
   padding: 100px;
 }
 
@@ -186,7 +234,7 @@ p {
 
 .cards-section .cards-container .card {
   border-radius: 15px;
-  background-color: white;
+  background-color: #dee2f6;
   margin: 20px;
   padding: 25px;
 }
@@ -197,8 +245,8 @@ p {
 }
 
 .points-section {
-  margin-top: 100px;
   padding: 100px;
+  background-color: #dee2f6;
 }
 
 .points-section .points-container {
@@ -235,12 +283,12 @@ p {
 }
 
 .points-section .points-container .points-in .top-points .point-sec .circle-main p {
-  margin-top: 22px;
+  margin-top: 10px;
   margin-right: 18px;
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background-color: #fa2d37;
+  background-color: #4f368c;
 }
 
 .points-section .points-container .points-in .top-points .point-sec p {
