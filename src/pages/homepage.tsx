@@ -61,13 +61,15 @@ const Point = ({ text }: { text: any }) => {
    )
 }
 
+// sections
+
 const HeadingSection = () => {
    return (
       <div className="heading-cont"
       >
          <div className="">
             <h1>Bullsorg</h1>
-            <h3>A crapy place for all those greedy people.</h3>
+            <p className="para-headings">A crapy place for all those greedy people.</p>
          </div>
          <div className="">
             <button type="button">Join now</button>
@@ -76,7 +78,6 @@ const HeadingSection = () => {
    )
 }
 
-// about section
 const AboutSection = () => {
 
    return (
@@ -147,9 +148,9 @@ const CTA = () => {
    return (
       <div id="CTA" className="CTA">
          <div className="main-container">
-            <img src="/Vector Smart Object-1.png" alt="" />
-            <h3 className="headings">No more wait now</h3>
-            <p>join us now to build your financial status</p>
+            <img src="/Vector Smart Object.png" alt="" />
+            <h3 className="headings">Join us now</h3>
+            <p className="para-headings">Join us now to build your financial status.oin us now to build your financial status</p>
             <button>JOIN US</button>
          </div>
       </div>

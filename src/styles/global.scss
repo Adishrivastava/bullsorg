@@ -21,6 +21,7 @@ $textDark: rgb(66, 61, 104);
 $textLight: rgb(68, 74, 120);
 
 $bgSecondary: rgb(222, 226, 246);
+$bgTertiary: #2f3242;
 $btnColor: rgb(57, 51, 80);
 
 $headingFont: 'Playfair Display', serif;
@@ -45,10 +46,14 @@ button {
 	letter-spacing: 1px;
 	cursor: pointer;
 	height: min-content;
+	font-weight: 500;
 	background-color: $primaryColor;
 	color: aliceblue;
 	font-family: 'Poppins', sans-serif;
+	// box-shadow: 0px 0px 3px rgb(195, 54, 54);
 }
+
+// ____________ typographies here __________________
 
 a {
 	text-decoration: none;
@@ -74,12 +79,14 @@ p {
 	font-weight: 700;
 	color: $textDark;
 	line-height: 3.3rem;
+	font-family: $headingFont;
 }
 
 .headings-2 {
 	font-size: 2.2rem;
 	font-weight: 700;
 	color: $textDark;
+	font-family: $headingFont;
 }
 
 .sub-heading {
@@ -90,10 +97,22 @@ p {
 	margin-bottom: 15px;
 }
 
+.para-headings {
+	font-weight: 500;
+	font-size: 1.3rem;
+}
+
 .para-text {
-	font-size: 1.1rem;
+	font-size: 1.2rem;
 	font-weight: 400;
 }
+
+// ______ helpers _________
+.t-c {
+	text-align: center;
+}
+
+// _____________ conatiners here _____________
 
 .page-container {
 	width: 100%;
@@ -143,6 +162,9 @@ p {
 	background-color: $primaryColor;
 }
 
+// ________________sections here ___________
+
+//heading section
 .heading-cont {
 	margin-top: 80px;
 	padding-top: 30px;
@@ -157,8 +179,7 @@ p {
 		text-align: center;
 		font-weight: 900;
 	}
-	h3 {
-		font-weight: 500;
+	p {
 		margin-top: 20px;
 		text-align: center;
 	}
@@ -168,18 +189,7 @@ p {
 	}
 }
 
-.second-section {
-	border-radius: 10px;
-	border: 4px solid $primaryColor;
-	h2 {
-		font-size: 2.5rem;
-		padding: 0px 20px;
-		font-family: $headingFont;
-	}
-	p {
-		font-size: 1.5rem;
-	}
-}
+//about section
 .about-section-cont {
 	width: 100%;
 	max-width: 1200px;
@@ -209,6 +219,7 @@ p {
 	}
 }
 
+// cards section
 .cards-section {
 	padding: 100px;
 	h4 {
@@ -220,10 +231,14 @@ p {
 		margin-top: 80px;
 
 		.card {
+			box-shadow: 0px 0px 10px $bgSecondary;
 			border-radius: 15px;
 			background-color: $bgSecondary;
 			margin: 20px;
 			padding: 25px;
+			// p {
+			// 	color: $primaryColor;
+			// }
 			img {
 				width: 60px;
 				padding-bottom: 20px;
@@ -232,6 +247,7 @@ p {
 	}
 }
 
+// points section
 .points-section {
 	padding: 100px;
 	background-color: $bgSecondary;
@@ -274,68 +290,198 @@ p {
 }
 
 // review container
-.review-container {
-	display: grid;
-	grid-template-columns: 1fr 5fr 1fr;
-	align-items: center;
-	padding: 50px;
-	position: relative;
-	svg {
-		font-size: 2rem;
+.review-section {
+	// display: grid;
+	// grid-template-columns: 3fr 2fr;
+	// justify-content: center;
+	// align-items: center;
+	.ill-img {
+		width: 80%;
 	}
-	.circle-1 {
-		position: absolute;
-		top: 50px;
-		left: 100px;
-		width: 100px;
-		height: 100px;
-		border-radius: 50%;
-		background-color: rgb(228, 220, 243);
-		z-index: -1;
-	}
-	.circle-2 {
-		position: absolute;
-		top: 100px;
-		right: 400px;
-		width: 200px;
-		height: 200px;
-		border-radius: 50%;
-		background-color: rgb(201, 191, 219);
-		z-index: -1;
-	}
-	.review {
-		img {
-			display: block;
-			width: 150px;
-			height: 150px;
+
+	.review-container {
+		// max-width: 1200px;
+		width: max-content;
+		display: block;
+		margin: auto;
+		padding: 50px;
+		margin: 50px auto;
+		position: relative;
+
+		.circle-1 {
+			position: absolute;
+			top: 50px;
+			left: 100px;
+			width: 100px;
+			height: 100px;
 			border-radius: 50%;
-			margin: auto;
-			margin-bottom: 30px;
+			background-color: rgb(228, 220, 243);
+			z-index: -1;
+		}
+		.circle-2 {
+			position: absolute;
+			top: 100px;
+			right: 400px;
+			width: 200px;
+			height: 200px;
+			border-radius: 50%;
+			background-color: rgb(201, 191, 219);
+			z-index: -1;
+		}
+		.review {
+			background-color: $bgSecondary;
+
+			box-shadow: 0px 0px 20px $bgSecondary;
+			border-radius: 20px;
+			margin-top: 80px;
+			// border-radius: 2rem;
+			padding: 50px 80px;
+
+			img {
+				display: block;
+				width: 150px;
+				height: 150px;
+				border-radius: 50%;
+				margin: auto;
+				margin-bottom: 30px;
+				color: $primaryColor;
+				background-color: $primaryColor;
+				// border: 6px $primaryColor solid;
+				background-size: cover;
+				background-position: center;
+				background-origin: content-box;
+			}
+
+			h3 {
+				font-size: 1.5rem;
+				text-align: center;
+				color: $textDark;
+				text-transform: capitalize;
+			}
+			p {
+				line-height: 25px;
+				max-width: 900px;
+				display: block;
+				margin: auto;
+				span {
+					display: block;
+					font-weight: 700;
+					img {
+						background-color: transparent !important;
+						color: #fff;
+						display: inline-block;
+						margin-bottom: 10px;
+						width: 30px;
+						height: 30px;
+					}
+				}
+
+				margin-top: 30px;
+			}
+		}
+
+		.bottom-container {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-top: 20px;
+			.arr-cont {
+				padding: 20px;
+				svg {
+					font-size: 2rem;
+					color: $textLight;
+					cursor: pointer;
+				}
+			}
+			.circles-cont {
+				padding: 10px;
+				display: flex;
+				.circle {
+					cursor: pointer;
+					margin: 5px;
+					width: 12px;
+					height: 12px;
+					border-radius: 50%;
+					background-color: $textLight;
+				}
+				.selected {
+					background-color: $primaryColor !important;
+				}
+			}
 		}
 	}
 }
 
+// CTA
 .CTA {
 	text-align: center;
+	margin: 100px auto;
 	img {
-		width: 60%;
+		width: 80%;
 	}
 	h3 {
-		margin-top: 40px;
+		margin-top: 100px;
 		text-align: center;
 	}
 	p {
 		margin-top: 20px;
 	}
 	button {
-		margin-top: 30px;
+		margin-top: 50px;
+		font-size: 1rem;
+		font-weight: 500;
 	}
 }
 
+// footer
 .footer {
-	padding: 50px;
-	background-color: $textDark;
+	padding: 10px 50px;
+	background-color: $bgTertiary;
+
+	.top-section {
+		max-width: 1100px;
+
+		display: flex;
+		margin: auto;
+
+		justify-content: space-between;
+		align-items: center;
+
+		img {
+			width: 200px;
+		}
+		h5 {
+			color: $primaryColor;
+		}
+		.socials {
+			display: flex;
+			svg {
+				margin: auto 10px;
+				color: $bgSecondary;
+				font-size: 1.5rem;
+			}
+		}
+	}
+
+	.middle-section {
+		text-align: center !important;
+		h5 {
+			color: $primaryColor;
+		}
+		p {
+			color: $bgSecondary;
+		}
+	}
+
+	.bottom-section {
+		padding: 40px 0px 20px 0px;
+		p {
+			color: rgb(172, 168, 178);
+		}
+	}
 }
+
+// _____________ media queries here _____________
 
 @media screen and (max-width: 600px) {
 	.review-container {
