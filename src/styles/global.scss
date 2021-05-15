@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
@@ -49,7 +48,7 @@ button {
 	font-weight: 500;
 	background-color: $primaryColor;
 	color: aliceblue;
-	font-family: 'Poppins', sans-serif;
+	font-family: 'Rubik', sans-serif;
 	// box-shadow: 0px 0px 3px rgb(195, 54, 54);
 }
 
@@ -119,8 +118,8 @@ p {
 }
 
 .navbar {
-	width: 100%;
 	background-color: white;
+	padding: 15px 20px;
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -128,10 +127,13 @@ p {
 	z-index: $layer3;
 	.nav-inner {
 		max-width: 1200px;
-		margin: 5px auto;
+		margin: auto;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		img {
+			width: 80px;
+		}
 		.sec-section {
 			display: flex;
 			.menu-items {
@@ -140,7 +142,7 @@ p {
 				margin-right: 20px;
 				a {
 					margin: auto 15px;
-					text-transform: uppercase;
+					text-transform: capitalize;
 					font-size: 0.9rem;
 					font-weight: 600;
 				}
@@ -166,9 +168,8 @@ p {
 
 //heading section
 .heading-cont {
-	margin-top: 80px;
-	padding-top: 30px;
-	width: 100%;
+	margin-top: 75px;
+	padding-top: 35px;
 	height: 120vh;
 	background-image: url('../assets/asset1.png');
 	background-size: cover;
@@ -178,6 +179,7 @@ p {
 		color: $primaryColor;
 		text-align: center;
 		font-weight: 900;
+		font-family: $headingFont;
 	}
 	p {
 		margin-top: 20px;
@@ -191,9 +193,8 @@ p {
 
 //about section
 .about-section-cont {
-	width: 100%;
 	max-width: 1200px;
-	margin: 70px auto;
+	margin: 70px auto 140px auto;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	align-items: center;
@@ -204,9 +205,7 @@ p {
 	}
 
 	.about-in {
-		width: 80%;
 		margin: auto;
-
 		h2 {
 			text-align: left;
 		}
@@ -221,7 +220,7 @@ p {
 
 // cards section
 .cards-section {
-	padding: 100px;
+	margin: 70px auto 100px 0px;
 	h4 {
 		text-align: center;
 	}
@@ -260,8 +259,6 @@ p {
 			margin: auto;
 		}
 		.points-in {
-			width: 80%;
-			margin: auto;
 			text-align: left;
 
 			.top-points {
@@ -291,50 +288,18 @@ p {
 
 // review container
 .review-section {
-	// display: grid;
-	// grid-template-columns: 3fr 2fr;
-	// justify-content: center;
-	// align-items: center;
-	.ill-img {
-		width: 80%;
-	}
+	padding: 2rem;
 
 	.review-container {
-		// max-width: 1200px;
-		width: max-content;
-		display: block;
-		margin: auto;
 		padding: 50px;
 		margin: 50px auto;
-		position: relative;
+		margin: auto;
 
-		.circle-1 {
-			position: absolute;
-			top: 50px;
-			left: 100px;
-			width: 100px;
-			height: 100px;
-			border-radius: 50%;
-			background-color: rgb(228, 220, 243);
-			z-index: -1;
-		}
-		.circle-2 {
-			position: absolute;
-			top: 100px;
-			right: 400px;
-			width: 200px;
-			height: 200px;
-			border-radius: 50%;
-			background-color: rgb(201, 191, 219);
-			z-index: -1;
-		}
 		.review {
 			background-color: $bgSecondary;
-
 			box-shadow: 0px 0px 20px $bgSecondary;
 			border-radius: 20px;
 			margin-top: 80px;
-			// border-radius: 2rem;
 			padding: 50px 80px;
 
 			img {
@@ -346,7 +311,6 @@ p {
 				margin-bottom: 30px;
 				color: $primaryColor;
 				background-color: $primaryColor;
-				// border: 6px $primaryColor solid;
 				background-size: cover;
 				background-position: center;
 				background-origin: content-box;
@@ -358,6 +322,7 @@ p {
 				color: $textDark;
 				text-transform: capitalize;
 			}
+
 			p {
 				line-height: 25px;
 				max-width: 900px;
@@ -415,9 +380,9 @@ p {
 // CTA
 .CTA {
 	text-align: center;
-	margin: 100px auto;
+	margin: 50px auto;
 	img {
-		width: 80%;
+		width: 90%;
 	}
 	h3 {
 		margin-top: 100px;
@@ -440,10 +405,8 @@ p {
 
 	.top-section {
 		max-width: 1100px;
-
 		display: flex;
 		margin: auto;
-
 		justify-content: space-between;
 		align-items: center;
 
@@ -455,6 +418,7 @@ p {
 		}
 		.socials {
 			display: flex;
+			justify-content: center;
 			svg {
 				margin: auto 10px;
 				color: $bgSecondary;
@@ -483,9 +447,123 @@ p {
 
 // _____________ media queries here _____________
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 900px) {
+	.navbar {
+		.menu-items {
+			display: none !important;
+		}
+	}
+	.footer {
+		.top-section {
+			margin-bottom: 40px;
+			justify-content: center !important;
+		}
+	}
 	.review-container {
 		grid-template-columns: 1fr 5fr 1fr;
+	}
+
+	.about-section-cont {
+		grid-template-columns: 1fr;
+		.about-in {
+			margin-top: 20px;
+			h2 {
+				text-align: center;
+			}
+			p {
+				text-align: center;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.headings {
+		font-size: 1.8rem !important;
+		line-height: 35px;
+		text-align: center;
+	}
+	button {
+		font-size: 0.7rem;
+		padding: 0.8rem 1rem;
+	}
+
+	.headings-2 {
+		font-size: 1.8rem !important;
+		line-height: 35px;
+		text-align: center;
+	}
+
+	.sub-heading {
+		text-align: center;
+	}
+
+	.navbar {
+		.nav-inner {
+			img {
+				width: 60px;
+			}
+		}
+	}
+
+	.heading-cont {
+		padding: 2rem;
+		height: 80vh !important;
+		h1 {
+			font-size: 3rem;
+		}
+	}
+
+	.about-section-cont {
+		padding: 0rem 2rem;
+		margin-bottom: 100px;
+		img {
+			width: 100% !important;
+		}
+	}
+
+	.cards-section {
+		padding: 0rem 2rem;
+		.cards-container {
+			margin-top: 40px;
+		}
+	}
+
+	.points-section {
+		padding: 2rem;
+		.points-container {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	.review-section {
+		padding: 2rem !important;
+		.review-container {
+			grid-template-columns: 1fr 5fr 1fr;
+			padding: 0px !important;
+			.review {
+				margin-top: 40px !important;
+				padding: 15px !important;
+				background-color: transparent !important;
+				box-shadow: none !important;
+				p {
+					font-size: 1.1rem;
+				}
+			}
+		}
+	}
+
+	.CTA {
+		margin-bottom: 40px !important;
+		h3 {
+			margin-top: 30px !important;
+		}
+	}
+
+	.footer {
+		.top-section {
+			display: grid !important;
+		}
 	}
 
 	.about-section-cont {

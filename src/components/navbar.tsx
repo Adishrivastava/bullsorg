@@ -1,6 +1,5 @@
 import React from 'react'
 import { HashLink } from 'react-router-hash-link';
-// import { Link } from 'react-router-dom'
 interface Props {
 
 }
@@ -10,8 +9,7 @@ const Navbar = (props: Props) => {
       <nav className="navbar">
          <div className="nav-inner">
             <img
-               src="/assets/logos/logoBig.png"
-               style={{ width: '100px' }}
+               src="/assets/logos/logo.png"
                alt="LOGO HERE"
             />
 
