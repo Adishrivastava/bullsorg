@@ -8,22 +8,22 @@ interface Props {
 
 const reviews = [
    {
-      image: '/assets/images/agrim.jpg',
+      image: '/assets/images/manash.jpg',
       name: 'Abhinav Dogra',
       review: 'Team Bullsorg assisted me a lot  to get handy with market and understand financial concepts. whole team is very cooperative and do not shy away from answering any of your queries/doubts. From assisting in demat account opening steps to recommending books to boost up and uplift your financial IQ and most importantly those Saturday live doubt clearing sessions were so useful.'
    },
    {
-      image: '/assets/images/agrim.jpg',
+      image: '/assets/images/manash.jpg',
       name: 'Rohit Saraf',
       review: 'Bullsorg is the best place to learn trading and investing.The mentors here are excellent at the work and explains the concepts like a brother. Systematic lectures helped me in understanding the market even better.Really learned a lot here especially the execution of theory we learned in actual trading.And the best day of the week is the doubt session via video conferencing.'
    },
    {
-      image: '/assets/images/agrim.jpg',
+      image: '/assets/images/manash.jpg',
       name: 'Agrim Sharma',
       review: 'I started my stock market journey 5months ago and since then, Bullsorg team stood by my side. Instead of just making money, they taught me the ins and outs of the market. They provided me with knowledge and platform to build a strong foundation. You got personal financial issues, have fundamental doubts or need technical analysis? They got you. The whole team is very cooperative and responsive, quick in communication, they don’t keep you waiting. '
    },
    {
-      image: '/assets/images/agrim.jpg',
+      image: '/assets/images/manash.jpg',
       name: 'rateek Beel',
       review: 'Every succesful person requires a mentor and it was very confusing for me to find someone who is expert in the field of Investing and trading.So one day while scrolling through instagram I came across Bullsorg and when I contacted them they explained me everything in detail .Whenever I am in any problem they have  always helped me and guided in the right path.Now since its been more than 5 months of joining,'
    },
@@ -31,7 +31,12 @@ const reviews = [
 ]
 
 const Review = ({ value }: { value: any }) => (
-   <div className="review">
+   <div className="review"
+      data-aos="fade-up"
+      data-aos-delay="50"
+      data-aos-duration="700"
+      data-aos-easing="ease-in-out-cubic"
+   >
       <img src={value.image} alt="asd" />
 
       <h3>{value.name}</h3>
@@ -71,8 +76,18 @@ const Reviews = (props: Props) => {
          <div className="review-section" id="reviews-section">
 
             <div className="review-container">
-               <p className="sub-heading">Testimonies</p>
-               <h3 className="headings t-c">What our customers say about us.</h3>
+               <p className="sub-heading"
+                  data-aos="fade-up"
+                  data-aos-delay="30"
+                  data-aos-duration="700"
+                  data-aos-easing="ease-in-out-cubic"
+               >Testimonies</p>
+               <h3 className="headings t-c"
+                  data-aos="fade-up"
+                  data-aos-delay="30"
+                  data-aos-duration="700"
+                  data-aos-easing="ease-in-out-cubic"
+               >What our customers say about us.</h3>
 
 
                <Review value={reviews[index]} />

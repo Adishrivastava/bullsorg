@@ -33,6 +33,10 @@ body {
 	transition: all 1s ease-in-out;
 }
 
+body {
+	overflow-y: scroll;
+}
+
 // button styles
 button {
 	border: none;
@@ -49,6 +53,9 @@ button {
 	background-color: $primaryColor;
 	color: aliceblue;
 	font-family: 'Rubik', sans-serif;
+	a {
+		color: #fff;
+	}
 	// box-shadow: 0px 0px 3px rgb(195, 54, 54);
 }
 
@@ -166,6 +173,28 @@ p {
 
 // ________________sections here ___________
 
+.loading-page {
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	.bull {
+		width: 120px;
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+	.loader {
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+}
+
 //heading section
 .heading-cont {
 	margin-top: 75px;
@@ -249,20 +278,21 @@ p {
 // points section
 .points-section {
 	padding: 100px;
+	padding-bottom: 80px;
 	background-color: $bgSecondary;
 
 	.points-container {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		img {
-			width: 80%;
+			width: 70%;
 			margin: auto;
 		}
 		.points-in {
 			text-align: left;
-
+			margin: auto 30px;
 			.top-points {
-				margin: 50px auto;
+				margin: 70px auto;
 				.point-sec {
 					display: flex;
 					.circle-main {
@@ -301,6 +331,7 @@ p {
 			border-radius: 20px;
 			margin-top: 80px;
 			padding: 50px 80px;
+			transition: all 1s ease-in;
 
 			img {
 				display: block;
@@ -533,6 +564,9 @@ p {
 		padding: 2rem;
 		.points-container {
 			grid-template-columns: 1fr;
+			.points-in {
+				margin: auto !important;
+			}
 		}
 	}
 

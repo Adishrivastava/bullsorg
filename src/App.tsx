@@ -1,12 +1,15 @@
 import './App.css';
 import './styles/global.css'
 import Homepage from './pages/homepage';
-import Navbar from './components/navbar';
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 function App() {
+
+  Aos.init();
+
   return (
     <div className="App">
-      <Navbar />
       <Homepage />
     </div>
   );

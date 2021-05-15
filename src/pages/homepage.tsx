@@ -1,4 +1,8 @@
+import React, { Fragment, useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 import Footer from '../components/footer'
+import LoadingPage from '../components/loading-page'
+import Navbar from '../components/navbar'
 import Reviews from '../components/reviews'
 
 interface Props {
@@ -41,7 +45,12 @@ const pointItems = [
 
 const Card = ({ item }: { item: any }) => {
    return (
-      <div className="card">
+      <div className="card"
+         data-aos="fade-up"
+         data-aos-delay="30"
+         data-aos-duration="1000"
+         data-aos-easing="ease-in-out-cubic"
+      >
          <img src={item.icon} alt="asd" />
          <p className="para-text">{item.label}</p>
       </div>
@@ -50,7 +59,9 @@ const Card = ({ item }: { item: any }) => {
 
 const Point = ({ text }: { text: any }) => {
    return (
-      <div className="point-sec">
+      <div className="point-sec"
+
+      >
          <div className="circle-main">
             <p></p>
          </div>
@@ -65,14 +76,28 @@ const Point = ({ text }: { text: any }) => {
 
 const HeadingSection = () => {
    return (
-      <div className="heading-cont"
+      <div
+         className="heading-cont"
+
       >
-         <div className="">
+         <div
+            className=""
+
+         >
             <h1>Bullsorg</h1>
             <p className="para-headings">A crapy place for all those greedy people.</p>
          </div>
-         <div className="">
-            <button type="button">Join now</button>
+         <div
+            className=""
+
+         >
+            <button type="button"
+            >
+               <Link to="/" target="_blank">
+               Join now
+               
+               </Link>
+            </button>
          </div>
       </div>
    )
@@ -82,8 +107,18 @@ const AboutSection = () => {
 
    return (
       <div className="about-section-cont" id="about-section">
-         <img src="/Vector Smart Object-5.png" alt="asd" />
-         <div className="about-in">
+         <img src="/Vector Smart Object-5.png" alt="asd"
+            data-aos="fade-up"
+            data-aos-delay="30"
+            data-aos-duration="700"
+            data-aos-easing="ease-in-out-cubic"
+         />
+         <div className="about-in"
+            data-aos="fade-up"
+            data-aos-delay="30"
+            data-aos-duration="700"
+            data-aos-easing="ease-in-out-cubic"
+         >
             <p className="sub-heading">About Us</p>
             <h3 className="headings">What we do</h3>
             <p className="para-text">
@@ -97,9 +132,19 @@ const AboutSection = () => {
 
 const CardsSection = () => {
    return (
-      <div className="cards-section" id="card-section">
+      <div className="cards-section" id="card-section"
+         data-aos="fade-up"
+         data-aos-delay="30"
+         data-aos-duration="700"
+         data-aos-easing="ease-in-out-cubic"
+      >
 
-         <div className="main-container">
+         <div className="main-container"
+            data-aos="fade-up"
+            data-aos-delay="30"
+            data-aos-duration="700"
+            data-aos-easing="ease-in-out-cubic"
+         >
             <p className="sub-heading">
                Covering from the basics to advanced.
             </p>
@@ -120,9 +165,16 @@ const CardsSection = () => {
 
 const PointsSection = () => {
    return (
-      <div className="points-section" id="points-section">
+      <div className="points-section" id="points-section"
+
+      >
          <div className="points-container">
-            <div className="points-in">
+            <div className="points-in"
+               data-aos="fade-up"
+               data-aos-delay="30"
+               data-aos-duration="700"
+               data-aos-easing="ease-in-out-cubic"
+            >
                <p className="sub-heading">Our Features</p>
                <h3 className="headings">
                   We provide best value to you
@@ -137,7 +189,12 @@ const PointsSection = () => {
 
                </div>
             </div>
-            <img src="/Vector Smart Object-2.png" alt="" />
+            <img src="/Vector Smart Object-2.png" alt=""
+               data-aos="fade-up"
+               data-aos-delay="30"
+               data-aos-duration="700"
+               data-aos-easing="ease-in-out-cubic"
+            />
 
          </div>
       </div>
@@ -148,9 +205,24 @@ const CTA = () => {
    return (
       <div id="CTA" className="CTA">
          <div className="main-container">
-            <img src="/Vector Smart Object.png" alt="" />
-            <h3 className="headings">Join us now</h3>
-            <p className="para-headings">Join us now to build your financial status.oin us now to build your financial status</p>
+            <img src="/Vector Smart Object.png" alt=""
+               data-aos="fade-up"
+               data-aos-delay="30"
+               data-aos-duration="700"
+               data-aos-easing="ease-in-out-cubic"
+            />
+            <h3 className="headings"
+               data-aos="fade-up"
+               data-aos-delay="30"
+               data-aos-duration="700"
+               data-aos-easing="ease-in-out-cubic"
+            >Join us now</h3>
+            <p className="para-headings"
+               data-aos="fade-up"
+               data-aos-delay="30"
+               data-aos-duration="700"
+               data-aos-easing="ease-in-out-cubic"
+            >Join us now to build your financial status.oin us now to build your financial status</p>
             <button>JOIN US</button>
          </div>
       </div>
@@ -159,24 +231,43 @@ const CTA = () => {
 
 
 const Homepage: React.FC = (props: Props) => {
+
+   const [loading, setLoading] = useState(true)
+  
+
+   useEffect(() => {
+      setTimeout(
+         () => { 
+         setLoading(false); 
+      }, 1000);
+   }, [])
+
    return (
-      <div className="page-container">
+      <Fragment>
+        { loading ? (
+           <LoadingPage />
+        ) : (
+      <>
+      <Navbar />
+        
+        <div className="page-container">
 
-         <HeadingSection />
+            <HeadingSection />
 
-         <AboutSection />
+            <AboutSection />
 
-         <CardsSection />
+            <CardsSection />
 
-         <PointsSection />
+            <PointsSection />
 
-         <Reviews />
+            <Reviews />
 
-         <CTA />
+            <CTA />
 
-         <Footer />
+            <Footer />
 
-      </div>
+            </div></>)}
+      </Fragment>
    )
 }
 

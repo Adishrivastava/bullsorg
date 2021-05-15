@@ -10,6 +10,10 @@ body {
   transition: all 1s ease-in-out;
 }
 
+body {
+  overflow-y: scroll;
+}
+
 button {
   border: none;
   outline: none;
@@ -28,6 +32,10 @@ button {
   background-color: #fa2d37;
   color: aliceblue;
   font-family: 'Rubik', sans-serif;
+}
+
+button a {
+  color: #fff;
 }
 
 a {
@@ -157,6 +165,37 @@ p {
   background-color: #fa2d37;
 }
 
+.loading-page {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.loading-page .bull {
+  width: 120px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.loading-page .loader {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
 .heading-cont {
   margin-top: 75px;
   padding-top: 35px;
@@ -247,6 +286,7 @@ p {
 
 .points-section {
   padding: 100px;
+  padding-bottom: 80px;
   background-color: #dee2f6;
 }
 
@@ -258,16 +298,17 @@ p {
 }
 
 .points-section .points-container img {
-  width: 80%;
+  width: 70%;
   margin: auto;
 }
 
 .points-section .points-container .points-in {
   text-align: left;
+  margin: auto 30px;
 }
 
 .points-section .points-container .points-in .top-points {
-  margin: 50px auto;
+  margin: 70px auto;
 }
 
 .points-section .points-container .points-in .top-points .point-sec {
@@ -313,6 +354,8 @@ p {
   border-radius: 20px;
   margin-top: 80px;
   padding: 50px 80px;
+  -webkit-transition: all 1s ease-in;
+  transition: all 1s ease-in;
 }
 
 .review-section .review-container .review img {
@@ -563,6 +606,9 @@ p {
   .points-section .points-container {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
+  }
+  .points-section .points-container .points-in {
+    margin: auto !important;
   }
   .review-section {
     padding: 2rem !important;
