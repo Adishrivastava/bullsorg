@@ -13,7 +13,11 @@ body {
   overflow-y: scroll;
 }
 
-button {
+.ml-2 {
+  margin-left: 20px;
+}
+
+.btn-primary {
   border: none;
   outline: none;
   border-radius: 5em;
@@ -30,9 +34,52 @@ button {
   background-color: #fa2d37;
   color: aliceblue;
   font-family: "Rubik", sans-serif;
+  box-shadow: 0px 3px 3px #d1cccc;
 }
-button a {
+.btn-primary a {
   color: #fff;
+}
+
+.btn-secondary {
+  border: none;
+  outline: none;
+  border-radius: 5em;
+  font-size: 0.8rem;
+  padding: 1em 1.8em;
+  text-transform: capitalize;
+  transition: all 0.2s ease-in;
+  letter-spacing: 1px;
+  cursor: pointer;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  font-weight: 500;
+  background-color: #6d6d76;
+  font-family: "Rubik", sans-serif;
+  box-shadow: 0px 3px 3px #d1cccc;
+  color: white;
+}
+
+.btn-outline {
+  border: 2px solid #fa2d37;
+  outline: none;
+  border-radius: 5em;
+  font-size: 0.8rem;
+  padding: 1em 1.8em;
+  text-transform: capitalize;
+  transition: all 0.2s ease-in;
+  letter-spacing: 1px;
+  cursor: pointer;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  font-weight: 600;
+  background-color: transparent;
+  color: #fa2d37 !important;
+  font-family: "Rubik", sans-serif;
+}
+.btn-outline a {
+  color: #fa2d37;
 }
 
 a {
@@ -172,6 +219,15 @@ p {
   background-size: cover;
   background-position: center;
 }
+.heading-cont .buttons-cont-heading {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+.heading-cont .buttons-cont-heading button {
+  margin-top: 40px;
+  font-size: 1rem;
+}
 .heading-cont h1 {
   font-size: 4rem;
   color: #fa2d37;
@@ -180,12 +236,11 @@ p {
   font-family: "Playfair Display", serif;
 }
 .heading-cont p {
+  max-width: 800px;
+  margin: auto;
+  font-weight: 500;
   margin-top: 20px;
   text-align: center;
-}
-.heading-cont button {
-  margin-top: 40px;
-  font-size: 1rem;
 }
 
 .about-section-cont {
@@ -475,6 +530,9 @@ p {
   .heading-cont {
     padding: 2rem;
     height: 80vh !important;
+  }
+  .heading-cont .buttons-cont-heading {
+    flex-direction: column;
   }
   .heading-cont h1 {
     font-size: 3rem;

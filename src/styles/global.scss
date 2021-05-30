@@ -37,8 +37,12 @@ body {
 	overflow-y: scroll;
 }
 
+.ml-2 {
+	margin-left: 20px;
+}
+
 // button styles
-button {
+.btn-primary {
 	border: none;
 	outline: none;
 	border-radius: 5em;
@@ -53,10 +57,48 @@ button {
 	background-color: $primaryColor;
 	color: aliceblue;
 	font-family: 'Rubik', sans-serif;
+	box-shadow: 0px 3px 3px rgb(209, 204, 204);
 	a {
 		color: #fff;
 	}
 	// box-shadow: 0px 0px 3px rgb(195, 54, 54);
+}
+.btn-secondary {
+	border: none;
+	outline: none;
+	border-radius: 5em;
+	font-size: 0.8rem;
+	padding: 1em 1.8em;
+	text-transform: capitalize;
+	transition: all 0.2s ease-in;
+	letter-spacing: 1px;
+	cursor: pointer;
+	height: min-content;
+	font-weight: 500;
+	background-color: rgb(109, 109, 118);
+	font-family: 'Rubik', sans-serif;
+	box-shadow: 0px 3px 3px rgb(209, 204, 204);
+	color: rgb(255, 255, 255);
+}
+
+.btn-outline {
+	border: 2px solid $primaryColor;
+	outline: none;
+	border-radius: 5em;
+	font-size: 0.8rem;
+	padding: 1em 1.8em;
+	text-transform: capitalize;
+	transition: all 0.2s ease-in;
+	letter-spacing: 1px;
+	cursor: pointer;
+	height: min-content;
+	font-weight: 600;
+	background-color: transparent;
+	color: $primaryColor !important;
+	font-family: 'Rubik', sans-serif;
+	a {
+		color: #fa2d37;
+	}
 }
 
 // ____________ typographies here __________________
@@ -203,6 +245,15 @@ p {
 	background-image: url('../assets/asset1.png');
 	background-size: cover;
 	background-position: center;
+	.buttons-cont-heading {
+		display: flex;
+		justify-content: center;
+		margin-top: 10px;
+		button {
+			margin-top: 40px;
+			font-size: 1rem;
+		}
+	}
 	h1 {
 		font-size: 4rem;
 		color: $primaryColor;
@@ -211,12 +262,11 @@ p {
 		font-family: $headingFont;
 	}
 	p {
+		max-width: 800px;
+		margin: auto;
+		font-weight: 500;
 		margin-top: 20px;
 		text-align: center;
-	}
-	button {
-		margin-top: 40px;
-		font-size: 1rem;
 	}
 }
 
@@ -540,6 +590,9 @@ p {
 	.heading-cont {
 		padding: 2rem;
 		height: 80vh !important;
+		.buttons-cont-heading {
+			flex-direction: column;
+		}
 		h1 {
 			font-size: 3rem;
 		}
