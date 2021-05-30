@@ -5,8 +5,7 @@ html,
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Source Sans Pro', sans-serif;
-  -webkit-transition: all 1s ease-in-out;
+  font-family: "Source Sans Pro", sans-serif;
   transition: all 1s ease-in-out;
 }
 
@@ -21,7 +20,6 @@ button {
   font-size: 0.8rem;
   padding: 1em 1.8em;
   text-transform: capitalize;
-  -webkit-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
   letter-spacing: 1px;
   cursor: pointer;
@@ -31,9 +29,8 @@ button {
   font-weight: 500;
   background-color: #fa2d37;
   color: aliceblue;
-  font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
 }
-
 button a {
   color: #fff;
 }
@@ -41,7 +38,6 @@ button a {
 a {
   text-decoration: none;
   color: #444a78;
-  -webkit-transition: all 1s ease-in-out;
   transition: all 1s ease-in-out;
 }
 
@@ -109,42 +105,24 @@ p {
   right: 0;
   z-index: 30;
 }
-
 .navbar .nav-inner {
   max-width: 1200px;
   margin: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
 }
-
 .navbar .nav-inner img {
   width: 80px;
 }
-
 .navbar .nav-inner .sec-section {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 .navbar .nav-inner .sec-section .menu-items {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  flex-direction: row;
   margin-right: 20px;
 }
-
 .navbar .nav-inner .sec-section .menu-items a {
   margin: auto 15px;
   text-transform: capitalize;
@@ -168,32 +146,22 @@ p {
 .loading-page {
   width: 100%;
   height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
 }
-
 .loading-page .bull {
   width: 120px;
   position: fixed;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
-
 .loading-page .loader {
   position: fixed;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 .heading-cont {
@@ -204,7 +172,6 @@ p {
   background-size: cover;
   background-position: center;
 }
-
 .heading-cont h1 {
   font-size: 4rem;
   color: #fa2d37;
@@ -212,12 +179,10 @@ p {
   font-weight: 900;
   font-family: "Playfair Display", serif;
 }
-
 .heading-cont p {
   margin-top: 20px;
   text-align: center;
 }
-
 .heading-cont button {
   margin-top: 40px;
   font-size: 1rem;
@@ -226,28 +191,20 @@ p {
 .about-section-cont {
   max-width: 1200px;
   margin: 70px auto 140px auto;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
 }
-
 .about-section-cont img {
   width: 75%;
   margin: auto;
 }
-
 .about-section-cont .about-in {
   margin: auto;
 }
-
 .about-section-cont .about-in h2 {
   text-align: left;
 }
-
 .about-section-cont .about-in p {
   margin-top: 30px;
   text-align: left;
@@ -257,28 +214,21 @@ p {
 .cards-section {
   margin: 70px auto 100px 0px;
 }
-
 .cards-section h4 {
   text-align: center;
 }
-
 .cards-section .cards-container {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   margin-top: 80px;
 }
-
 .cards-section .cards-container .card {
-  -webkit-box-shadow: 0px 0px 10px #dee2f6;
-          box-shadow: 0px 0px 10px #dee2f6;
+  box-shadow: 0px 0px 10px #dee2f6;
   border-radius: 15px;
   background-color: #dee2f6;
   margin: 20px;
   padding: 25px;
 }
-
 .cards-section .cards-container .card img {
   width: 60px;
   padding-bottom: 20px;
@@ -289,40 +239,27 @@ p {
   padding-bottom: 80px;
   background-color: #dee2f6;
 }
-
 .points-section .points-container {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
 }
-
 .points-section .points-container img {
   width: 70%;
   margin: auto;
 }
-
 .points-section .points-container .points-in {
   text-align: left;
   margin: auto 30px;
 }
-
 .points-section .points-container .points-in .top-points {
   margin: 70px auto;
 }
-
 .points-section .points-container .points-in .top-points .point-sec {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 .points-section .points-container .points-in .top-points .point-sec .circle-main {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 .points-section .points-container .points-in .top-points .point-sec .circle-main p {
   margin-top: 10px;
   margin-right: 18px;
@@ -331,7 +268,6 @@ p {
   border-radius: 50%;
   background-color: #4f368c;
 }
-
 .points-section .points-container .points-in .top-points .point-sec p {
   text-align: left;
   margin-bottom: 20px;
@@ -340,24 +276,19 @@ p {
 .review-section {
   padding: 2rem;
 }
-
 .review-section .review-container {
   padding: 50px;
   margin: 50px auto;
   margin: auto;
 }
-
 .review-section .review-container .review {
   background-color: #dee2f6;
-  -webkit-box-shadow: 0px 0px 20px #dee2f6;
-          box-shadow: 0px 0px 20px #dee2f6;
+  box-shadow: 0px 0px 20px #dee2f6;
   border-radius: 20px;
   margin-top: 80px;
   padding: 50px 80px;
-  -webkit-transition: all 1s ease-in;
   transition: all 1s ease-in;
 }
-
 .review-section .review-container .review img {
   display: block;
   width: 150px;
@@ -371,14 +302,12 @@ p {
   background-position: center;
   background-origin: content-box;
 }
-
 .review-section .review-container .review h3 {
   font-size: 1.5rem;
   text-align: center;
   color: #423d68;
   text-transform: capitalize;
 }
-
 .review-section .review-container .review p {
   line-height: 25px;
   max-width: 900px;
@@ -386,12 +315,10 @@ p {
   margin: auto;
   margin-top: 30px;
 }
-
 .review-section .review-container .review p span {
   display: block;
   font-weight: 700;
 }
-
 .review-section .review-container .review p span img {
   background-color: transparent !important;
   color: #fff;
@@ -400,37 +327,24 @@ p {
   width: 30px;
   height: 30px;
 }
-
 .review-section .review-container .bottom-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   margin-top: 20px;
 }
-
 .review-section .review-container .bottom-container .arr-cont {
   padding: 20px;
 }
-
 .review-section .review-container .bottom-container .arr-cont svg {
   font-size: 2rem;
   color: #444a78;
   cursor: pointer;
 }
-
 .review-section .review-container .bottom-container .circles-cont {
   padding: 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 .review-section .review-container .bottom-container .circles-cont .circle {
   cursor: pointer;
   margin: 5px;
@@ -439,7 +353,6 @@ p {
   border-radius: 50%;
   background-color: #444a78;
 }
-
 .review-section .review-container .bottom-container .circles-cont .selected {
   background-color: #fa2d37 !important;
 }
@@ -448,20 +361,16 @@ p {
   text-align: center;
   margin: 50px auto;
 }
-
 .CTA img {
   width: 90%;
 }
-
 .CTA h3 {
   margin-top: 100px;
   text-align: center;
 }
-
 .CTA p {
   margin-top: 20px;
 }
-
 .CTA button {
   margin-top: 50px;
   font-size: 1rem;
@@ -472,60 +381,40 @@ p {
   padding: 10px 50px;
   background-color: #2f3242;
 }
-
 .footer .top-section {
   max-width: 1100px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   margin: auto;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
 }
-
 .footer .top-section img {
   width: 200px;
 }
-
 .footer .top-section h5 {
   color: #fa2d37;
 }
-
 .footer .top-section .socials {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
-
 .footer .top-section .socials svg {
   margin: auto 10px;
   color: #dee2f6;
   font-size: 1.5rem;
 }
-
 .footer .middle-section {
   text-align: center !important;
 }
-
 .footer .middle-section h5 {
   color: #fa2d37;
 }
-
 .footer .middle-section p {
   color: #dee2f6;
 }
-
 .footer .bottom-section {
   padding: 40px 0px 20px 0px;
 }
-
 .footer .bottom-section p {
   color: #aca8b2;
 }
@@ -534,19 +423,18 @@ p {
   .navbar .menu-items {
     display: none !important;
   }
+
   .footer .top-section {
     margin-bottom: 40px;
-    -webkit-box-pack: center !important;
-        -ms-flex-pack: center !important;
-            justify-content: center !important;
+    justify-content: center !important;
   }
+
   .review-container {
-    -ms-grid-columns: 1fr 5fr 1fr;
-        grid-template-columns: 1fr 5fr 1fr;
+    grid-template-columns: 1fr 5fr 1fr;
   }
+
   .about-section-cont {
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
+    grid-template-columns: 1fr;
   }
   .about-section-cont .about-in {
     margin-top: 20px;
@@ -558,28 +446,32 @@ p {
     text-align: center;
   }
 }
-
 @media screen and (max-width: 600px) {
   .headings {
     font-size: 1.8rem !important;
     line-height: 35px;
     text-align: center;
   }
+
   button {
     font-size: 0.7rem;
     padding: 0.8rem 1rem;
   }
+
   .headings-2 {
     font-size: 1.8rem !important;
     line-height: 35px;
     text-align: center;
   }
+
   .sub-heading {
     text-align: center;
   }
+
   .navbar .nav-inner img {
     width: 60px;
   }
+
   .heading-cont {
     padding: 2rem;
     height: 80vh !important;
@@ -587,6 +479,7 @@ p {
   .heading-cont h1 {
     font-size: 3rem;
   }
+
   .about-section-cont {
     padding: 0rem 2rem;
     margin-bottom: 100px;
@@ -594,53 +487,54 @@ p {
   .about-section-cont img {
     width: 100% !important;
   }
+
   .cards-section {
     padding: 0rem 2rem;
   }
   .cards-section .cards-container {
     margin-top: 40px;
   }
+
   .points-section {
     padding: 2rem;
   }
   .points-section .points-container {
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
+    grid-template-columns: 1fr;
   }
   .points-section .points-container .points-in {
     margin: auto !important;
   }
+
   .review-section {
     padding: 2rem !important;
   }
   .review-section .review-container {
-    -ms-grid-columns: 1fr 5fr 1fr;
-        grid-template-columns: 1fr 5fr 1fr;
+    grid-template-columns: 1fr 5fr 1fr;
     padding: 0px !important;
   }
   .review-section .review-container .review {
     margin-top: 40px !important;
     padding: 15px !important;
     background-color: transparent !important;
-    -webkit-box-shadow: none !important;
-            box-shadow: none !important;
+    box-shadow: none !important;
   }
   .review-section .review-container .review p {
     font-size: 1.1rem;
   }
+
   .CTA {
     margin-bottom: 40px !important;
   }
   .CTA h3 {
     margin-top: 30px !important;
   }
+
   .footer .top-section {
-    display: -ms-grid !important;
     display: grid !important;
   }
+
   .about-section-cont {
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
+    grid-template-columns: 1fr;
   }
   .about-section-cont .about-in {
     margin-top: 20px;
@@ -651,5 +545,4 @@ p {
   .about-section-cont .about-in p {
     text-align: center;
   }
-}
-/*# sourceMappingURL=global.css.map */
+}/*# sourceMappingURL=global.css.map */
